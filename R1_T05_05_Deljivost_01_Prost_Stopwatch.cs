@@ -9,6 +9,7 @@ class R1_T05_05_Deljivost_01_Prost
     }
     static void Main_Prost_Stoperica()
     {
+        Console.WriteLine("Petar Petrovic");
         bool prost = false;
         ulong n = 1000000007;       // n = 10^6 + 7
         Console.WriteLine(n);
