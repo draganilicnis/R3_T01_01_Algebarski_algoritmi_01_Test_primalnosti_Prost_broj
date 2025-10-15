@@ -15,7 +15,11 @@ class R1_T05_05_Deljivost_01_Prost
     {
         // ulong n = ulong.Parse(Console.ReadLine());
         // Console.WriteLine(Prost_Ver_04(n) ? "DA" : "NE");
+        Main_Prost_Stoperica();
+    }
 
+    static void Main_Prost_Stoperica()
+    {
         ulong n = 1000000007;
         Console.WriteLine(n);
         bool prost = false;
@@ -83,3 +87,45 @@ class R1_T05_05_Deljivost_01_Prost
         return prost;
     }
 }
+
+/*
+    static bool Prost_Ver_03(ulong n)
+    {
+        if (n <= 1) return false;
+        else if (n == 2) return true;
+        else if (n % 2 == 0) return false;
+        else
+            for (ulong d = 3; d * d <= n; d = d + 2)
+                if (n % d == 0) return false; 
+        return true;
+    }
+    static bool Prost_Ver_02(ulong n)
+    {
+        if (n <= 1) return false;
+        else if (n == 2) return true;
+        else
+            for (ulong d = 2; d * d <= n; d++)
+                if (n % d == 0) return false;
+        return true;
+    }
+    static bool Prost_Ver_01(ulong n)
+    {
+        if (n <= 1) return false;
+        else
+            for (ulong d = 2; d < n; d++)
+                if (n % d == 0) return false;
+        return true;
+    }
+    static bool Prost_Ver_00(ulong n)
+    {
+        bool prost = true;
+        if (n <= 1) prost = false;
+        else
+        {
+            for (ulong d = 2; d < n; d++)
+                if (n % d == 0) { prost = false; /* break; */ /*}
+        }
+        return prost;
+    }
+}
+*/
