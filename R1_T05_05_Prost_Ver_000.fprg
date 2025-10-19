@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bingo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-19 04:41:17 po podne"/>
+        <attribute name="created" value="QmluZ287RFVTQU4zOzIwMjUtMTAtMTk7MDM6NTM6MTAgcG8gcG9kbmU7MjgzMw=="/>
+        <attribute name="edited" value="QmluZ287RFVTQU4zOzIwMjUtMTAtMTk7MDQ6NDE6MTcgcG8gcG9kbmU7NjsyOTUx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <declare name="prost" type="Boolean" array="False" size=""/>
+            <assign variable="prost" expression="TRUE"/>
+            <declare name="d" type="Integer" array="False" size=""/>
+            <for variable="d" start="2" end="N - 1" direction="inc" step="1">
+                <if expression="N % d = 0">
+                    <then>
+                        <assign variable="prost" expression="FALSE"/>
+                    </then>
+                    <else/>
+                </if>
+            </for>
+            <if expression="prost">
+                <then>
+                    <output expression="&quot;DA&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;NE&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
