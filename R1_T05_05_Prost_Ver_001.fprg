@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Bingo"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-10-20 04:26:54 po podne"/>
+        <attribute name="created" value="QmluZ287RFVTQU4zOzIwMjUtMTAtMTk7MDM6NTM6MTAgcG8gcG9kbmU7MjgzMw=="/>
+        <attribute name="edited" value="QmluZ287RFVTQU4zOzIwMjUtMTAtMjA7MDQ6MjY6NTQgcG8gcG9kbmU7MTE7Mjk5MQ=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="N" type="Integer" array="False" size=""/>
+            <input variable="N"/>
+            <declare name="prost" type="Boolean" array="False" size=""/>
+            <assign variable="prost" expression="Prost01(N)"/>
+            <if expression="prost">
+                <then>
+                    <output expression="&quot;DA&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;NE&quot;" newline="True"/>
+                </else>
+            </if>
+            <assign variable="prost" expression="Prost04(N)"/>
+            <if expression="prost">
+                <then>
+                    <output expression="&quot;DA&quot;" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;NE&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="Prost01" type="Boolean" variable="prost">
+        <parameters>
+            <parameter name="N" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="prost" type="Boolean" array="False" size=""/>
+            <assign variable="prost" expression="TRUE"/>
+            <declare name="d" type="Integer" array="False" size=""/>
+            <assign variable="d" expression="2"/>
+            <while expression="d &lt; N - 1 &amp;&amp; prost">
+                <if expression="N % d = 0">
+                    <then>
+                        <assign variable="prost" expression="FALSE"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="d" expression="d + 1"/>
+            </while>
+        </body>
+    </function>
+    <function name="Prost04" type="Boolean" variable="prost">
+        <parameters>
+            <parameter name="N" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="prost" type="Boolean" array="False" size=""/>
+            <assign variable="prost" expression="TRUE"/>
+            <declare name="d" type="Integer" array="False" size=""/>
+            <assign variable="d" expression="2"/>
+            <while expression="d * d &lt;= N &amp;&amp; prost">
+                <if expression="N % d = 0">
+                    <then>
+                        <assign variable="prost" expression="FALSE"/>
+                    </then>
+                    <else/>
+                </if>
+                <assign variable="d" expression="d + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
